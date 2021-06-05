@@ -1,0 +1,194 @@
+body ,html{
+    height: 100%;
+    margin: unset;
+    
+}
+body.registration{
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b1e698;
+    height: unset;
+
+}
+body.landing{
+   display: flex;
+   flex-direction: column;
+    /* Full height */
+  background-image: url(./Images/landing.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#landingHeader {
+    margin: auto;
+    margin-top: 5%;
+    background-color: rgba(128,128,128, 0.2);
+    background-blend-mode:lighten;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 50px;
+    -webkit-text-stroke: 2px black; 
+    letter-spacing: -1.6px;
+    word-spacing: 0.6px;
+    color: #77b55a;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+#landingSolgan {
+    
+    background-color: rgba(128,128,128, 0.1);
+    background-blend-mode:lighten;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    margin: auto;
+    -webkit-text-stroke: 1px black; 
+    letter-spacing: -1.6px;
+    word-spacing: 0.6px;
+    color: #77b55a;
+    
+    font-weight: normal;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+div.landing{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+button.registration {
+    text-align: center;
+    margin-top: 20px;
+	background-color:#18ab29;
+	border-radius:28px;
+	border:1px solid #44c767;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:19px;
+	font-weight:bold;
+	padding: 19px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+button.registration:hover {
+	background-color:#5cbf2a;
+}
+button.registration:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+a.landing {
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:21px;
+	font-weight:bold;
+	padding:18px 53px;
+	text-decoration:none;
+	text-shadow:-1px 6px 6px #5b8a3c;
+}
+a.landing:hover {
+	background-color:#72b352;
+}
+a.landing:active {
+	position:relative;
+	top:1px;
+}
+div.registration{
+    background-color: #72b352;
+    margin: 20px;
+    border-radius:10px ;
+    padding: 20px;
+    width: 50%;
+    height: 60%;
+    max-height: 60%;
+}
+div.registrationMain{
+    background-color: black;
+    height: 100px;
+    width: 100px;
+}
+.fieldIcon {
+    margin-right: 0px;
+    max-height: 1%;
+    padding: 10px;
+    background: #5b8a3c;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+  input{
+    margin-top: 0px 5px;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px;
+    outline: none;
+  }
+  input:focus{
+      border-color: #5b8a3c ;
+      border-style:solid ;
+      
+  }
+  
+  select{
+    border-radius: 5px;
+    width: 52%;
+    padding: 10px;
+    outline: none;
+    margin-left:0px ;
+  }
+  select:active{
+    border-color: #5b8a3c ;
+    border-style:solid ;
+    
+}
+#fname, #lname{
+    width: 24%;
+}
+div.fieldContainer{
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    input{
+        display: block;
+        margin: 5px;
+        width: 80%;
+    }
+    #fname, #lname{
+        width: 80%;
+    }
+    div.fieldContainer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+    }
+    #landingHeader{
+        margin-top: 20%;
+    }
+  }

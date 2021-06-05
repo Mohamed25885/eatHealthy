@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <title>Registration</title>
+</head>
+
+<body class="registration">
+    <div class="registration">
+        <form onsubmit="return formSubmitted()" id="registrationForm" method="dialog">
+            <fieldset>
+                <legend>Registration</legend>
+                    <div class="fieldContainer">
+                        <span class="fa fa-user fieldIcon"></span>
+                        <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                    </div>
+                    <div class="fieldContainer">
+                        <span class="fa fa-venus-mars fieldIcon"></span>
+                       <select name="gender" id="gender" required>
+                           <option value="male">Male</option>
+                           <option value="female">Female</option>
+                       </select>
+                    </div>
+                    <div class="fieldContainer">
+                        <span class="fa fa-envelope fieldIcon"></span>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="fieldContainer">
+                        <span class="fa fa-mobile fieldIcon"></span>
+                        <input type="tel" id="tel" name="tel" placeholder="Phone Number (+2012345678910)" pattern="^(\+)[20]{2}[0-9]{10}$" maxlength="13" required>
+                    </div>
+                    <div class="fieldContainer">
+                    <span class="fa fa-lock fieldIcon"></span>
+                    <input type="password" onchange="passwordValidator()" oninput="passwordValidator()" id="password" name="password" placeholder="Password" minlength="8" maxlength="8" required>
+                </div>
+                
+            </fieldset>
+            
+            <button type="submit" form="registrationForm" class="registration">Submit</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
