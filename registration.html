@@ -37,9 +37,19 @@
                         <input type="tel" id="tel" name="tel" placeholder="Phone Number (+2012345678910)" pattern="^(\+)[20]{2}[0-9]{10}$" maxlength="13" required>
                     </div>
                     <div class="fieldContainer">
-                    <span class="fa fa-lock fieldIcon"></span>
+                    <span class="fa  fa-lock fieldIcon"></span>
                     <input type="password" onchange="passwordValidator()" oninput="passwordValidator()" id="password" name="password" placeholder="Password" minlength="8" maxlength="8" required>
-                </div>
+                    
+                        <span class="fa fa-exclamation-circle passwordHint">
+                            <div id="hint">
+                                <b>Hint</b>
+                                <span>Use this password in case you can't enter a valid one:</span>
+                                <b><i>D5@adfwg</i></b>
+                            </div>
+                        </span>
+                        
+                    
+                    </div>
                 
             </fieldset>
             

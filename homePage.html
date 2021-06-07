@@ -1,14 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <title>Home Page</title>
-</head>
-<body onload="homePageLoaded()">
-    <div><span id="firstName"></span></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+        <title>Home Page</title>
+    </head>
+    <body onload="homePageLoaded()" class="homePage">
+        <div class="drawerModal" >
+            <div class="menu">
+                <span id="closeDrawer" class="fa fa-times" style="cursor: pointer;" onclick="openDrawer()"></span>
+                <div class="menu-items">
+                    <a href="#" class="menu-item thisDrawerPage">Home</a>
+                    <a href="" class="menu-item">Gallery</a>
+                    <a href="" class="menu-item">About</a>
+                    <a href="" class="menu-item">Contact</a>
+                </div>
+            </div>
+        </div>
+        <header class="homePage">
+            <div class="logo homePage">Healthy Food</div>
+            <div class="nav">
+                <a href="#" class="nav thisPage">Home</a>
+                <a href="" class="nav">Gallery</a>
+                <a href="" class="nav">About</a>
+                <a href="" class="nav">Contact</a>
+            </div>
+            <div class="drawer fa fa-navicon" onclick="openDrawer()"></div>
+        </header>
+        <main>
+        
+<div class="section">
+            <div class="logo homePage insideSection">Live Healthy !!</div>
+        </div>
+       
+        <div class="imageParent">
+            <div class="imageChild">
+                <div class = "image one"></div>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum temporibus magni quasi facilis vel explicabo ad architecto et qui. Debitis commodi architecto deleniti facilis minima aliquam maxime dicta autem!</p>
+               </div>
+           
+            <div class="imageChild">
+                <div class = "image two"></div>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum temporibus magni quasi facilis vel explicabo ad architecto et qui. Debitis commodi architecto deleniti facilis minima aliquam maxime dicta autem!</p>
+               </div>
+           
+            <div class="imageChild">
+                <div class = "image three"></div>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum temporibus magni quasi facilis vel explicabo ad architecto et qui. Debitis commodi architecto deleniti facilis minima aliquam maxime dicta autem!</p>
+               </div>
+           
+            <div class="imageChild">
+                <div class = "image four"></div>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum temporibus magni quasi facilis vel explicabo ad architecto et qui. Debitis commodi architecto deleniti facilis minima aliquam maxime dicta autem!</p>
+               </div>
+           
+            <div class="imageChild">
+                <div class = "image one"></div>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum temporibus magni quasi facilis vel explicabo ad architecto et qui. Debitis commodi architecto deleniti facilis minima aliquam maxime dicta autem!</p>
+               </div>
+           
+            <div class="imageChild">
+                <div class = "image three"></div>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum temporibus magni quasi facilis vel explicabo ad architecto et qui. Debitis commodi architecto deleniti facilis minima aliquam maxime dicta autem!</p>
+               </div>
+           
+            <div class="imageChild">
+                <div class = "image two"></div>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum temporibus magni quasi facilis vel explicabo ad architecto et qui. Debitis commodi architecto deleniti facilis minima aliquam maxime dicta autem!</p>
+               </div>
+           
+        </div>
+    </main>
+
+    <footer class="homePage">
+        <div class="footer">
+
+           <div class="footer-item">
+               <span class="footer-item-header">About Us</span>
+               <p class="footer-item">We take care of our health by eating healthy organic food. Healthy food has many type and shapes.</p>
+               
+               <a href="" class="footer-item">Read More...</a>
+           </div>
+
+           
+           <div class="footer-item">
+               <span class="footer-item-header">QUICK LINKS</span>
+               <ul>
+                   <li class="footer-item"><a href="#" class="footer-item">Home</a></li>
+                   <li class="footer-item"><a href="" class="footer-item">Gallery</a></li>
+                   <li class="footer-item"><a href="" class="footer-item">About</a></li>
+                   <li class="footer-item"><a href="" class="footer-item">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-item">
+             <span class="footer-item-header">Subscribe</span>
+                <input type="email" id="footerEmail" placeholder="Email" class="footer-item">
+                <span class="fa fa-toggle-right footer-item"></span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

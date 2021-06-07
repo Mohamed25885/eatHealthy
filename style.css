@@ -3,6 +3,11 @@ body ,html{
     margin: unset;
     
 }
+body.homePage{
+    position: relative;
+    height: unset;
+    width: unset;
+}
 body.registration{
     padding-top: 5%;
     display: flex;
@@ -21,17 +26,22 @@ body.landing{
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-#landingHeader {
+ul{
+    list-style-type: none; 
+}
+div.landingHeader {
     margin: auto;
     margin-top: 5%;
     background-color: rgba(128,128,128, 0.2);
     background-blend-mode:lighten;
-    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 50px;
-    -webkit-text-stroke: 2px black; 
+    
+}
+div.logo{
+    font-family: "Comic Sans MS", cursive, sans-serif;
     letter-spacing: -1.6px;
     word-spacing: 0.6px;
+    -webkit-text-stroke: 2px black; 
     color: #77b55a;
     font-weight: normal;
     font-style: normal;
@@ -62,8 +72,6 @@ div.landing{
     justify-content: center;
 
 }
-
-
 button.registration {
     text-align: center;
     margin-top: 20px;
@@ -87,9 +95,6 @@ button.registration:active {
 	position:relative;
 	top:1px;
 }
-
-        
-
 a.landing {
 	box-shadow: 0px 10px 14px -7px #3e7327;
 	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
@@ -128,6 +133,7 @@ div.registrationMain{
     width: 100px;
 }
 .fieldIcon {
+    
     margin-right: 0px;
     max-height: 1%;
     padding: 10px;
@@ -161,6 +167,26 @@ div.registrationMain{
     border-style:solid ;
     
 }
+#hint{
+    display: none;
+    
+    position: absolute;
+    background-color: gainsboro;
+    bottom: 0px;
+}
+div.hintIcon-container{
+    position: relative;
+    display: inline-block;
+}
+span.passwordHint{
+    position: relative;
+    margin: 5px;    
+}
+span.passwordHint:hover #hint , span.passwordHint:active #hint{display: block;}
+
+fieldset{
+    border-radius: 20px;
+}
 #fname, #lname{
     width: 24%;
 }
@@ -170,9 +196,234 @@ div.fieldContainer{
     flex-direction: row;
 }
 
-
-@media only screen and (max-width: 600px) {
+div.homePage{
     
+    display: inline-block;
+    font-size: 30px;
+    -webkit-text-stroke: 1px black; 
+}
+a.nav{
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    letter-spacing: -1.4px;
+    word-spacing: 0.8px;
+    color: #77b55a;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+a.thisPage{
+    border-bottom: 4px solid #b7fc97;
+    padding-bottom: 3px;
+    border-radius: 5px;
+}
+div.drawer{
+    display: none;
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+}
+header.homePage{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.drawerModal{
+    display: none;
+    top: 0;
+    right: 0;
+    text-align: right;
+    position: absolute; 
+    z-index: 1; 
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4);
+}
+div.menu{
+   border-top-left-radius:20px ;
+    right: 0;
+    position: fixed;
+    background-color: silver;
+    height: 100%;
+    width: 200px;
+}
+div.menu-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#closeDrawer{
+    font-size: 30px;
+    padding: 20px;
+}
+.menu-item{
+    display: block;    
+    margin: 20px;
+    margin-top: 40px;
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.thisDrawerPage{
+    color: white;
+}
+main.homePage{
+    display: flex;
+    flex-direction: ROW;
+}
+div.insideSection{
+    margin: auto;
+    -webkit-text-stroke: 2px #558340; 
+    top: 50%;
+    left: 45%;
+    font-size: 50px;
+    color: white;
+    
+}
+div.section{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;
+    margin: 20px 0px;
+    background-image: url(./Images/sectionOne.jpg);
+}
+div.imageParent{
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+}
+div.imageChild{
+    display: inline-block;
+    text-align: center;
+    
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px 0px;
+    border: 2px dashed #6ea355 ;
+    height: fit-content;
+    width: 300px;
+    
+}
+img.imageChild{
+    border-radius: 20px;
+    max-width: 80%;
+}
+div.image{
+    margin: auto;
+    border-radius: 20px;
+    background-attachment:local;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 300px;
+}
+.one{background-image:url(./Images/image.jpg) ;}
+.three{background-image:url(./Images/image2.jpg) ;}
+.four{background-image:url(./Images/image3.jpg) ;}
+.two{background-image:url(./Images/image4.jpg) ;}
+
+
+footer.homePage{
+    margin-top: 30px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    width: 100%;
+    height: 500px;
+    background-image: url(./Images/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+}
+div.footer{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    position: absolute; 
+    z-index: 1; 
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4);
+}
+div.footer-item{
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    padding: 10px;
+    width: 200px;
+}
+span.footer-item-header{
+    color: rgb(218, 216, 216);
+    font-size: 27px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+}
+p.footer-item{
+    color: silver;
+}
+span.footer-item{
+    font-size: 30px;
+    color: #b7fc97;
+}
+li.footer-item{
+   margin-bottom: 4px; 
+}
+a.footer-item{
+    color: #77b55a;
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
+}
+a.footer-item::before{
+    content: "\a";
+}
+@media only screen and (max-width: 650px) {
+    div.drawer{
+        cursor: pointer;
+        display: inline-block;
+    }
+    a.nav{
+        display: none;
+    }
+    div.footer-item{
+        margin-left:20px;
+        margin-right:20px;
+    }
+    div.footer{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    div.imageParent{
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+    div.imageChild{
+        width: 85%;
+    }
+    div.image{
+        width: 400px;
+    }
     input{
         display: block;
         margin: 5px;

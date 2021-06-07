@@ -1,4 +1,7 @@
+
 var currentClient
+
+
 
 class Client {
     constructor(gender,fname, lname, email, phoneNumber) {
@@ -10,6 +13,19 @@ class Client {
     }
     fromJSON(json) {
         return new Client(json.gender,json.fname, json.lname, json.email, json.phoneNumber)
+    }
+}
+
+function openDrawer(){
+    var drawer = document.getElementsByClassName("drawerModal")[0]
+    /*
+    var style = window.getComputedStyle(drawer)
+    var prop = style.getPropertyValue("display")*/
+    if(drawer.style.display == "block"){
+        drawer.style.display = "none"
+    }
+    else{
+        drawer.style.display = "block"
     }
 }
 
@@ -27,18 +43,26 @@ function formSubmitted() {
         return true
     }
     else {
-        alert("PASSWORD IS INVALID")
+        alert("INVALID PASSWORD")
         return false
     }
 }
 function homePageLoaded() {
     let temp = sessionStorage.getItem("currentClient")
-    console.log(temp)
     currentClient = new Client().fromJSON(JSON.parse(temp))
     let gender = currentClient.gender == "male" ? "Mr. "  : "Mrs. "
-    document.getElementById("firstName").innerHTML =gender +  currentClient.fname
+    document.getElementById("footerEmail").value = currentClient.email
 }
 
+function openDialog(){
+    let drawer = document.getElementById("drawerDialog");
+    if(drawer.open){
+        drawer.open = false
+    }
+    else{
+        drawer.open = true
+    }
+}
 
 function passwordValidator() {
     let pwd = String(document.getElementById("password").value)
