@@ -4,8 +4,6 @@
 
 var currentClient
 
-
-
 class Client {
     constructor(gender,fname, lname, email, phoneNumber) {
         this.gender = gender
@@ -18,10 +16,12 @@ class Client {
         return new Client(json.gender,json.fname, json.lname, json.email, json.phoneNumber)
     }
 }
+
 function showImageModal(img){
     let image = img.className.split(" gallery ")[1]
     openImageModel(image)
 }
+
 function openDrawer(){
     var drawer = document.getElementsByClassName("drawerModal")[0]
     /*
@@ -67,6 +67,27 @@ function getValue(id) {
     return document.getElementById(`${id}`).value
 }
 
+
+function homePageLoaded() {
+    let temp = sessionStorage.getItem("currentClient")
+    currentClient = new Client().fromJSON(JSON.parse(temp))
+    let gender = currentClient.gender == "male" ? "Mr. "  : "Mrs. "
+    console.log(currentClient)
+    document.getElementById("footerEmail").value = currentClient.email
+}
+
+function openDialog(){
+    let drawer = document.getElementById("drawerDialog");
+    if(drawer.open){
+        drawer.open = false
+    }
+    else{
+        drawer.open = true
+    }
+}
+
+
+
 function formSubmitted() {
     if (passwordValidator()) {
         let temp = new Client(getValue("gender"),getValue("fname"), getValue("lname"), getValue("email"), getValue("tel"))
@@ -81,22 +102,7 @@ function formSubmitted() {
         return false
     }
 }
-function homePageLoaded() {
-    let temp = sessionStorage.getItem("currentClient")
-    currentClient = new Client().fromJSON(JSON.parse(temp))
-    let gender = currentClient.gender == "male" ? "Mr. "  : "Mrs. "
-    document.getElementById("footerEmail").value = currentClient.email
-}
 
-function openDialog(){
-    let drawer = document.getElementById("drawerDialog");
-    if(drawer.open){
-        drawer.open = false
-    }
-    else{
-        drawer.open = true
-    }
-}
 
 function passwordValidator() {
     let pwd = String(getValue("password"))
