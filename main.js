@@ -72,7 +72,6 @@ function homePageLoaded() {
     let temp = sessionStorage.getItem("currentClient")
     currentClient = new Client().fromJSON(JSON.parse(temp))
     let gender = currentClient.gender == "male" ? "Mr. "  : "Mrs. "
-    console.log(currentClient)
     document.getElementById("footerEmail").value = currentClient.email
 }
 
