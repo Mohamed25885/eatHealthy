@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <title>Gallery</title>
+</head>
+
+<body>
+    <div class="imageModalParent">
+        <span class="closeImageModal fa fa-times" onclick="openImageModel()"></span>
+        <div class="imageModal image one"></div>
+    </div>
+    <div class="drawerModal">
+        <div class="menu">
+            <span id="closeDrawer" class="fa fa-times" style="cursor: pointer;" onclick="openDrawer()"></span>
+            <div class="menu-items">
+                <a href="./homePage.html" class="menu-item">Home</a>
+                <a href="./gallery.html" class="menu-item">Gallery</a>
+                <a href="#" class="menu-item thisDrawerPage">About</a>
+                <a href="" class="menu-item">Contact</a>
+            </div>
+        </div>
+    </div>
+    <header class="nav">
+        <a href="./homePage.html">
+            <div class="logo homePage">Healthy Food</div>
+        </a>
+        <div class="nav">
+            <a href="./homePage.html" class="nav">Home</a>
+            <a href="./gallery.html" class="nav">Gallery</a>
+            <a href="#" class="nav thisPage">About</a>
+            <a href="" class="nav">Contact</a>
+        </div>
+        <div class="drawer fa fa-navicon" onclick="openDrawer()"></div>
+    </header>
+
+    <main>
+        
+            <div class="section">
+                <div class="logo homePage insideSection">About Us</div>
+            </div>
+        
+        <span class="explore">About Our Website</span>
+        <div class="image about two"></div>
+
+        
+
+        <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error perspiciatis minus alias eius
+            earum repellendus expedita aperiam sunt, maxime odit amet placeat maiores iste aliquam consectetur facere
+            accusantium provident pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto quam
+            quos quo! Autem iusto a pariatur rerum eveniet facilis, nisi voluptates cumque numquam illo quasi voluptate
+            repellendus. Doloribus, quas? Far far away, behind the word mountains, far from the countries Vokalia and
+            Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
+            Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the
+            necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your
+            mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
+            life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far
+            World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild
+            Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia,
+            put her initial into the belt and made herself on the way. When she reached the first hills of the Italic
+            Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
+            Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then
+        </p>
+
+    </main>
+
+    <footer class="homePage">
+        <div class="footer">
+
+            <div class="footer-item">
+                <span class="footer-item-header">About Us</span>
+                <p class="footer-item">We take care of our health by eating healthy organic food. Healthy food has many
+                    type and shapes.</p>
+
+                <a href="" class="footer-item">Read More...</a>
+            </div>
+
+
+            <div class="footer-item">
+                <span class="footer-item-header">QUICK LINKS</span>
+                <ul>
+                    <li class="footer-item"><a href="./homePage.html" class="footer-item">Home</a></li>
+                    <li class="footer-item"><a href="./gallery.html" class="footer-item">Gallery</a></li>
+                    <li class="footer-item"><a href="#" class="footer-item">About</a></li>
+                    <li class="footer-item"><a href="" class="footer-item">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-item">
+                <span class="footer-item-header">Subscribe</span>
+                <input type="email" id="footerEmail" placeholder="Email" class="footer-item">
+                <span class="fa fa-toggle-right footer-item"></span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
