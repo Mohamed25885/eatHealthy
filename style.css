@@ -1,6 +1,7 @@
 body ,html{
     height: 100%;
     margin: unset;
+    background-color: rgb(240, 240, 240);
     
 }
 body.homePage{
@@ -228,8 +229,8 @@ div.drawer{
     height: 50px;
     font-size: 45px;
 }
-header.homePage{
-    background-color: white;
+header.nav{
+    background-color: rgba(255,255,255, 0.5);
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -272,6 +273,9 @@ div.menu-items{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
+.menu-item:hover{
+    color: rgb(250, 244, 244)
+}
 .thisDrawerPage{
     color: white;
 }
@@ -281,9 +285,9 @@ main.homePage{
 }
 div.insideSection{
     margin: auto;
+    text-align: center;
     -webkit-text-stroke: 2px #558340; 
-    top: 50%;
-    left: 45%;
+    
     font-size: 50px;
     color: white;
     
@@ -301,18 +305,15 @@ div.section{
 div.imageParent{
     display: flex;
     flex-direction: row;
-    justify-self: flex-start;
-    align-items: flex-start;
     flex-wrap: wrap;
-    
 }
 div.imageChild{
     display: inline-block;
     text-align: center;
-    
     border-radius: 20px;
     margin: 10px;
-    padding: 10px 0px;
+    margin-left: 30px;
+    padding: 10px 10px;
     border: 2px dashed #6ea355 ;
     height: fit-content;
     width: 300px;
@@ -330,6 +331,61 @@ div.image{
     background-size: cover;
     width: 250px;
     height: 300px;
+}
+div.gallery{
+    
+    position: relative;
+    margin: 20px auto;
+    width: 350px;
+    height: 400px;
+}
+div.gallery p.imageGallery{
+    display: none;
+}
+div.gallery:hover{
+    cursor: pointer;
+}
+div.imageModalParent{
+    display: none;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+}
+span.closeImageModal{
+    float: right;
+    font-size: 30px;
+    margin: 3%;
+    cursor: pointer;
+    color: white;
+}
+div.imageModal{
+    position: absolute;
+    width: 80% ; 
+    height: 60%;
+    left: 10%;
+    top: 20%;
+    background-size: 100% 100%;
+    animation: imageModal 0.5s 1;
+}
+@keyframes imageModal {
+    from {width: 0%; height: 0%;}
+    to {width: 80%; height: 60%;}
+}
+div.gallery:hover p.imageGallery, div.gallery:active p.imageGallery{
+    text-align: center;
+    color: white;
+    display: block;
+    margin:0px auto;
+    border-radius: 20px;
+    position: absolute;
+    font-size: 25px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    cursor:zoom-in;
 }
 .one{background-image:url(./Images/image.jpg) ;}
 .three{background-image:url(./Images/image2.jpg) ;}
@@ -397,6 +453,21 @@ a.footer-item{
 a.footer-item::before{
     content: "\a";
 }
+
+
+span.explore{
+    display: inline-block;
+    width:  100%;
+    margin: 20px auto;
+    font-size: 27px;
+    font-family:monospace;
+    font-weight: 200;
+    letter-spacing: 5px;
+    word-spacing: -15px;
+    text-align: center;
+}
+
+
 @media only screen and (max-width: 650px) {
     div.drawer{
         cursor: pointer;
@@ -415,6 +486,7 @@ a.footer-item::before{
         align-items:flex-start;
     }
     div.imageParent{
+       
         flex-direction: column;
         justify-self: center;
         align-items: center;
@@ -425,6 +497,7 @@ a.footer-item::before{
     div.image{
         width: 80%;
     }
+
     input{
         display: block;
         margin: 5px;

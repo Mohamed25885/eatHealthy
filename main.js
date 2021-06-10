@@ -1,4 +1,7 @@
 
+
+
+
 var currentClient
 
 
@@ -15,7 +18,10 @@ class Client {
         return new Client(json.gender,json.fname, json.lname, json.email, json.phoneNumber)
     }
 }
-
+function showImageModal(img){
+    let image = img.className.split(" gallery ")[1]
+    openImageModel(image)
+}
 function openDrawer(){
     var drawer = document.getElementsByClassName("drawerModal")[0]
     /*
@@ -26,6 +32,34 @@ function openDrawer(){
     }
     else{
         drawer.style.display = "block"
+    }
+}
+function openImageModel(img){
+    var modal = document.getElementsByClassName("imageModalParent")[0]
+    var imageModal = document.getElementsByClassName("imageModal")[0]
+    /*
+    var style = window.getComputedStyle(drawer)
+    var prop = style.getPropertyValue("display")*/
+    if(modal.style.display == "block"){
+        modal.style.display = "none"
+    }
+    else{
+        console.log(img == "two")
+        if(img == "one"){
+            imageModal.style.backgroundImage = "url(./Images/image.jpg)"
+        }
+        else if(img == "two"){
+            imageModal.style.backgroundImage = "url(./Images/image4.jpg)"
+        }
+        else if(img == "three"){
+            imageModal.style.backgroundImage = "url(./Images/image2.jpg)"
+        }
+        else{
+            imageModal.style.backgroundImage = "url(./Images/image3.jpg)"
+
+        }
+        
+        modal.style.display = "block"
     }
 }
 
@@ -65,7 +99,7 @@ function openDialog(){
 }
 
 function passwordValidator() {
-    let pwd = String(document.getElementById("password").value)
+    let pwd = String(getValue("password"))
     if (pwd != null && pwd != "") {
         if (pwd[0].match("^[A-Z]{1}") && pwd.indexOf(" ") == -1) {
             pwd = pwd.slice(1)
