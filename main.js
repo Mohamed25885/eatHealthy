@@ -66,7 +66,10 @@ function openImageModel(img){
 function getValue(id) {
     return document.getElementById(`${id}`).value
 }
-
+function contactUsSubmit(){
+    alert("Thank you for contacting us \n We will get to you as soon as possible")
+    document.getElementById("contactUsForm").reset()
+}
 
 function homePageLoaded() {
     let temp = sessionStorage.getItem("currentClient")
