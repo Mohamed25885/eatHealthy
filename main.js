@@ -71,8 +71,10 @@ function getValue(id) {
 function homePageLoaded() {
     let temp = sessionStorage.getItem("currentClient")
     currentClient = new Client().fromJSON(JSON.parse(temp))
-    let gender = currentClient.gender == "male" ? "Mr. "  : "Mrs. "
+
     document.getElementById("footerEmail").value = currentClient.email
+    document.getElementById("contactEmail").value = currentClient.email
+    document.getElementById("contactName").value = `${currentClient.fname} ${currentClient.lname}`
 }
 
 function openDialog(){
@@ -117,6 +119,16 @@ function passwordValidator() {
     }
     else return false
 }
+
+
+window.addEventListener("click",(event)=>{
+    const drawer = document.getElementsByClassName("drawerModal")[0]
+    const modal = document.getElementsByClassName("imageModalParent")[0]
+    if (event.target == drawer || event.target == modal) {
+        modal.style.display = "none";
+        drawer.style.display = "none"
+      }
+})
 
 
 

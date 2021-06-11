@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <title>Contact Us</title>
+</head>
+<body>
+    <body onload="homePageLoaded()" class="homePage">
+        <div class="imageModalParent">
+            <span class="closeImageModal fa fa-times" onclick="openImageModel()"></span>
+            <div class="imageModal image one"></div>
+        </div>
+        <div class="drawerModal">
+            <div class="menu">
+                <span id="closeDrawer" class="fa fa-times" style="cursor: pointer;" onclick="openDrawer()"></span>
+                <div class="menu-items">
+                    <a href="./homePage.html" class="menu-item">Home</a>
+                    <a href="./gallery.html" class="menu-item">Gallery</a>
+                    <a href="./about.html" class="menu-item">About</a>
+                    <a href="#" class="menu-item thisDrawerPage">Contact</a>
+                </div>
+            </div>
+        </div>
+        <header class="nav">
+            <a href="./homePage.html">
+                <div class="logo homePage">Healthy Food</div>
+            </a>
+            <div class="nav">
+                <a href="./homePage.html" class="nav">Home</a>
+                <a href="./gallery.html" class="nav">Gallery</a>
+                <a href="./about.html" class="nav">About</a>
+                <a href="#" class="nav thisPage">Contact</a>
+            </div>
+            <div class="drawer fa fa-navicon" onclick="openDrawer()"></div>
+        </header>
+    
+        <main>
+            
+            <div class="section">
+                <div class="logo homePage insideSection">Contact Us</div>
+            </div>
+            
+            <span class="explore">Have a question?</span>
+
+            <div class="contactUs">
+                <form>
+                    <div class="field">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="contactName" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="contactEmail" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message:</label>
+                        <textarea name="message"  required></textarea>
+                    </div>
+                    <button type="submit" class="registration contactUs">Submit</button>
+                </form>
+                <div class="info">
+                    <span class="explore info">Contact Info.</span>
+                    <ul class="info">
+                        <li>108 Shobra, Borham, Elsahel, Cairo Governorate</li>
+                        <li>eat@healthy.com</li>
+                        <li>+2011111111111</li>
+                    </ul>
+                </div>
+            </div>
+            
+    
+            
+    
+        </main>
+    
+        <footer class="homePage">
+            <div class="footer">
+    
+                <div class="footer-item">
+                    <span class="footer-item-header">About Us</span>
+                    <p class="footer-item">We take care of our health by eating healthy organic food. Healthy food has many
+                        type and shapes.</p>
+    
+                    <a href="./about.html" class="footer-item">Read More...</a>
+                </div>
+    
+    
+                <div class="footer-item">
+                    <span class="footer-item-header">QUICK LINKS</span>
+                    <ul>
+                        <li class="footer-item"><a href="./homePage.html" class="footer-item">Home</a></li>
+                        <li class="footer-item"><a href="./gallery.html" class="footer-item">Gallery</a></li>
+                        <li class="footer-item"><a href="./about.html" class="footer-item">About</a></li>
+                        <li class="footer-item"><a href="#" class="footer-item">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-item">
+                    <span class="footer-item-header">Subscribe</span>
+                    <input type="email" id="footerEmail" placeholder="Email" class="footer-item">
+                    <span class="fa fa-toggle-right footer-item"></span>
+                </div>
+            </div>
+        </footer>
+    
+    </body>
+</body>
+</html>
