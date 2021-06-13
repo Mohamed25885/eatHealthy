@@ -18,6 +18,7 @@ body.registration{
     height: unset;
 
 }
+
 html.registration{
     background-color: #b1e698;
 }
@@ -486,6 +487,18 @@ span.explore{
     text-align: center;
 }
 
+caption{
+    
+    width:  100%;
+    margin: 20px auto;
+    font-size: 32px;
+    font-family:monospace;
+    font-weight: 200;
+    letter-spacing: 5px;
+    word-spacing: -15px;
+    text-align: center;
+}
+
 div.field  label{
     display: block;
     padding: 20px;
@@ -536,6 +549,61 @@ ul.info li{
 ul.info li::before{
     content: "\2022  ";
 }
+p.facts{
+    column-count: unset;
+}
+
+
+
+
+
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+th, td{
+    border-left: 2px solid white;
+    border-spacing: 20px;
+    height: 50px;
+}
+th{
+    text-align: center;
+    height: 50px;
+    font-family: monospace;
+    font-size: 20px;
+}
+th[class = "basic"]{
+    font-weight: 300;
+    background-color: #6ea355;
+}
+th[class= "pro"]{
+    font-weight: 500;
+background-color: #63944c;
+}
+th[class = "ult"]{
+    font-weight: 900;
+    background-color: #5b8a3c;
+}
+tr:last-child{
+    background-color: #424141;
+    height: 40px;
+}
+tr:last-child button{
+    border-radius: 5px;
+    height: 30px;
+    font-size: 17px;
+    font-family: serif;
+    font-weight: bold;
+}
+td{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 @media only screen and (max-width: 650px) {
     div.field input, div.field textarea{
         width: 100%;
